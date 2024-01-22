@@ -29,17 +29,23 @@ class MyString:
 
     def count_sentences(self):        
         myString = self.value
-        for punc in ["!","?", "..."]:
-            myString = myString.replace(punc, ".")
+        # for punc in ["!","?", "..."]:
+        #     myString = myString.replace(punc, ".")
+        # sentences = [x for x in myString.split('.') if x]    
+        # return len(sentences)
+
+                 #more detailed way: 
+        myString = myString.replace("!", ".")
+        myString = myString.replace("?", ".")
         sentences = [x for x in myString.split('.') if x]    
         return len(sentences)
+          
 
-
+            ###didn't work
         # period_split =[s for s in myString.split(".") if "?" not in s and "!" not in s and s] 
         # question_split = [s for s in myString.split("?") if "!" not in s and s]
         # exclamation_spilt = [s for s in myString.split("!") if s]
         # count = len(exclamation_spilt) + len(period_split)+ len(question_split)
-
         # print(period_split)
         # print(exclamation_spilt)
         # print(question_split)
